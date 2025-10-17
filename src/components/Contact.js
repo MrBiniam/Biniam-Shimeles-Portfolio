@@ -47,7 +47,11 @@ const Contact = () => {
 
     try {
       // Using Netlify Forms
-      const formData = new FormData(e.target);
+      const formData = new FormData();
+      formData.append('form-name', 'contact');
+      formData.append('name', e.target.name.value);
+      formData.append('email', e.target.email.value);
+      formData.append('message', e.target.message.value);
       
       const response = await fetch('/', {
         method: 'POST',
