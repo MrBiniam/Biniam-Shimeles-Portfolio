@@ -3,8 +3,6 @@ import React, { useState, useEffect } from 'react';
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showHeroText, setShowHeroText] = useState(false);
-  
-  const targetText = 'Biniam Shimeles';
 
   useEffect(() => {
     setIsVisible(true);
